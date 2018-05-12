@@ -15,7 +15,7 @@ def kijiweni():
     timestamp = time.strftime('%b-%d-%Y-%H%M', t)
 
     file_txt = open('../data/saved/kijiweni.txt ' + timestamp, 'w')
-    tag = '******** ALL THIS DATA ARE COLLECT FROM KIJIWENI.CO.TZ *************** \n'
+    tag = '******** ALL THIS DATA ARE COLLECTED FROM KIJIWENI.CO.TZ *************** \n'
     file_txt.write(tag)
 
     for found in html_soup.find_all('div', {'class': 'post'}):
