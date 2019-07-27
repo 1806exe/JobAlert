@@ -1,7 +1,22 @@
+"""
+
+    Author: 1806exe
+    Email: 1806exe@gmail.com
+    GitHub: https://www.github.com/1806exe
+
+"""
+
+import os
 import requests
 import time
 from bs4 import BeautifulSoup as Soup
 
+def create_dirs():
+    t = time.localtime()
+    timestamp = time.strftime('%b-%Y', t)
+    path = r'..\data\saved\{}'.format(timestamp)
+    if not os.path.exists(path):
+        os.makedirs(path)
 
 def kijiweni():
     print('Collecting data...')
@@ -12,9 +27,9 @@ def kijiweni():
 
     html_soup = Soup(html_contents, 'html.parser')
     t = time.localtime()
-    timestamp = time.strftime('%b-%d-%Y-%H%M', t)
-
-    file_txt = open('../data/saved/kijiweni.txt ' + timestamp, 'w')
+    timestamp = time.strftime('%d-%m-%Y %H:%M', t)
+    dir_name = time.strftime('%b-%Y', t)
+    file_txt = open('../data/saved/{}/kijiweni.txt '.format(dir_name) + timestamp, 'w')
     tag = '******** ALL THIS DATA ARE COLLECTED FROM KIJIWENI.CO.TZ *************** \n'
     file_txt.write(tag)
 
@@ -31,4 +46,5 @@ def kijiweni():
 
 
 if __name__ == '__main__':
+    create_dirs()
     kijiweni()
