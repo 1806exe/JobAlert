@@ -84,6 +84,7 @@ def ajira_portal():
 
 
 if __name__ == '__main__':
+    # call main function
     create_dirs()
     kijiweni()
     ajira_portal()
