@@ -1,4 +1,4 @@
-python==3.5
+python==3.6
 requests==2.21.0
 beautifulsoup4==4.6.0
 tldextract==2.2.1
