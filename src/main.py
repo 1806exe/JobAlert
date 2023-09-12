@@ -4,7 +4,6 @@
     GitHub: https://www.github.com/1806exe
 """
 
-
 import os
 from datetime import datetime
 import requests

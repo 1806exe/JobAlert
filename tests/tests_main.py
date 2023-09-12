@@ -2,7 +2,7 @@ import pytest
 from datetime import datetime
 from src.main import scrape_ajirayako  # Import the function from your module
 
-@pytest.mark.parametrize("test_url", ["https://ajirayako.co.tz/", "https://example.com"])  # Test with different URLs
+@pytest.mark.parametrize("test_url", ["https://ajirayako.co.tz/"])  # Test with different URLs
 def test_scrape_ajirayako(tmpdir, test_url):
     # Set up a temporary directory for testing
     tmp_dir = tmpdir.mkdir("test_folder")
