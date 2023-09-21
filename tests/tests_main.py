@@ -17,8 +17,6 @@ def test_scrape_ajirayako(tmpdir, test_url):
         file_path = tmp_dir.join(file_name)
         assert file_path.exists()
 
-        # You can add more assertions here to check the contents of the file or other aspects of the function's behavior
-
 # Run the tests
 if __name__ == "__main__":
     pytest.main()
