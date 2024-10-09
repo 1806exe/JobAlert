@@ -128,3 +128,4 @@ tz_saas_project/media/school_logos/*
 ./run
 ./migrate
 ./makemigration
+jobs/
